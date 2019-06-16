@@ -6,3 +6,7 @@ This changelogfile contains all changes to this plugin.
 
 - Created plugin 
 - Added CI
+
+## 1.0.2
+
+- Updated CI
