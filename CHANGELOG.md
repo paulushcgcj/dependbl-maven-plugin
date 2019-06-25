@@ -10,3 +10,8 @@ This changelogfile contains all changes to this plugin.
 ## 1.0.2
 
 - Updated CI
+
+## 1.0.3
+
+- Added Sonar to CI
+- Updated Licence File
