@@ -36,8 +36,6 @@ public class ProjectManager {
       manager.addToList(project.getOriginalModel().getDependencies(), dependencyModel);
     }
 
-    log.info("[dependbl] Intermediate version of POM file generated, run a dependbl:commit to persist changes");
-
     //After the original model was changed, persist it
     writeOriginalModel(backupFile);
   }
@@ -53,8 +51,6 @@ public class ProjectManager {
       manager.removeFromList(project.getOriginalModel().getDependencies(), dependencyModel);
 
     }
-
-    log.info("[dependbl] Intermediate version of POM file generated, run a dependbl:commit to persist changes");
 
     //After the original model was changed, persist it
     writeOriginalModel(backupFile);

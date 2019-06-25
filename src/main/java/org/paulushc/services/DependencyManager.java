@@ -108,7 +108,7 @@ public class DependencyManager {
     dpdnc.setVersion(version);
 
     log
-        .warn(
+        .info(
             "[dependbl] Adding "
                 + groupId + ":" + artifactId + ":" + version
         );
