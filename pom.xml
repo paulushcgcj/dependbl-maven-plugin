@@ -266,5 +266,11 @@
 		</repository>
 	</distributionManagement>
 
+	<scm>
+		<url>git@github.com:paulushcgcj/dependbl-maven-plugin.git</url>
+		<connection>scm:git:${scm.url}</connection>
+		<developerConnection>scm:git:${scm.url}</developerConnection>
+	</scm>
+
 
 </project>
