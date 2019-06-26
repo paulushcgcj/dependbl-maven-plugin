@@ -6,18 +6,8 @@ This changelog file contains all changes to this plugin.
 
 - Created plugin 
 - Added CI
-
-## 1.0.2
-
-- Updated CI
-
-## 1.0.3
-
 - Added Sonar to CI
-- Updated Licence File
-
-## 1.0.4
-
+- Added Licence File
 - Moved files to specilized packages
 - Refactored Mojos
 - Renamed RemoveMojo to UnpackMojo

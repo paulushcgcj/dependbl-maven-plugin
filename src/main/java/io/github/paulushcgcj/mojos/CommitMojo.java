@@ -1,11 +1,11 @@
-package org.paulushc.mojos;
+package io.github.paulushcgcj.mojos;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
-import org.paulushc.services.ProjectManager;
+import io.github.paulushcgcj.services.ProjectManager;
 
 @Mojo(name = "commit", requiresDirectInvocation = true, threadSafe = true)
 public class CommitMojo extends AbstractMojo {

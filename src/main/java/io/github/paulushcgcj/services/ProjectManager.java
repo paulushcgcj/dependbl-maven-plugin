@@ -1,12 +1,12 @@
-package org.paulushc.services;
+package io.github.paulushcgcj.services;
 
+import io.github.paulushcgcj.models.DependencyModel;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.WriterFactory;
-import org.paulushc.models.DependencyModel;
 
 import java.io.File;
 import java.io.FileWriter;

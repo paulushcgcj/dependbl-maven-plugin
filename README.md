@@ -7,8 +7,8 @@
 
 
 [![GitHub license](https://img.shields.io/github/license/paulushcgcj/dependbl-maven-plugin.svg)](https://github.com/paulushcgcj/dependbl-maven-plugin/blob/master/LICENSE.md)
-![Maven Central](https://img.shields.io/maven-central/v/org.paulushc/dependbl-maven-plugin.svg)
-![Bintray](https://img.shields.io/bintray/v/paulushc/org.paulushc/dependbl-maven-plugin.svg)
+![Maven Central](https://img.shields.io/maven-central/v/io.github.paulushcgcj/dependbl-maven-plugin.svg)
+![Bintray](https://img.shields.io/bintray/v/paulushc/io.github.paulushcgcj/dependbl-maven-plugin.svg)
 ![GitHub release](https://img.shields.io/github/release/paulushcgcj/dependbl-maven-plugin.svg)
 
 
@@ -18,7 +18,7 @@ This plugin was born due to a personal necessity. In one of my projects, I neede
 
 This saved us a bunch of time and effort on updating vital dependencies that required updates to check for breaking changes.
 
-For released versions go directly to [maven central](https://mvnrepository.com/artifact/org.paulushc/dependbl-maven-plugin)
+For released versions go directly to [maven central](https://mvnrepository.com/artifact/io.github.paulushcgcj/dependbl-maven-plugin)
 
 
 ## How to use it
@@ -29,7 +29,7 @@ To use this plugin is super simple, first add it to your build plugins and then 
 <build>
     <plugins>
         <plugin>
-            <groupId>org.paulushc</groupId>
+            <groupId>io.github.paulushcgcj</groupId>
             <artifactId>dependbl-maven-plugin</artifactId>
             <version>x.y.z</version>
         </plugin>

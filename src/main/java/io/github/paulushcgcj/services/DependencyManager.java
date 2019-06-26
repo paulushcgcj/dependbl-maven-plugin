@@ -1,9 +1,9 @@
-package org.paulushc.services;
+package io.github.paulushcgcj.services;
 
+import io.github.paulushcgcj.models.DependencyModel;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
-import org.paulushc.models.DependencyModel;
 
 import java.util.List;
 

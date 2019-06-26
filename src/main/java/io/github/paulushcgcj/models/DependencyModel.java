@@ -1,4 +1,4 @@
-package org.paulushc.models;
+package io.github.paulushcgcj.models;
 
 import java.util.Objects;
 

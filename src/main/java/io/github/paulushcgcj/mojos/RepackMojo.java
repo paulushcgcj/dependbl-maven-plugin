@@ -1,13 +1,13 @@
-package org.paulushc.mojos;
+package io.github.paulushcgcj.mojos;
 
+import io.github.paulushcgcj.models.DependencyModel;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
-import org.paulushc.models.DependencyModel;
-import org.paulushc.services.ProjectManager;
+import io.github.paulushcgcj.services.ProjectManager;
 
 import java.util.ArrayList;
 import java.util.List;
