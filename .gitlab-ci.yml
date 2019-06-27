@@ -16,7 +16,7 @@ stages:
   - deploy
 
 before_script:
-  - 'gpg --import GPG_PUB_FL'
+  - 'gpg --import $GPG_PUB_FL'
   - 'gpg --import $GPG_SEC_FL'
 
 validate:
