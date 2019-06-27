@@ -16,6 +16,7 @@ stages:
   - deploy
 
 before_script:
+  - 'export GPG_TTY=$(tty)'
   - 'gpg --import $GPG_PUB_FL'
   - 'gpg --import $GPG_SEC_FL'
 
