@@ -17,8 +17,8 @@ stages:
 
 before_script:
   - 'export GPG_TTY=$(tty)'
-  - 'echo "$GPG_PUB_FL" | gpg --batch --import'
-  - 'echo "$GPG_SEC_FL" | gpg --batch --import'
+  - 'gpg --import $GPG_PUB_FL'
+  - 'gpg --import $GPG_SEC_FL'
 
 validate:
   stage: validate
