@@ -2,9 +2,11 @@ package io.github.paulushcgcj.services;
 
 import io.github.paulushcgcj.models.DependencyModel;
 import org.apache.maven.model.Dependency;
+import org.apache.maven.model.Exclusion;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DependencyManager {
@@ -57,7 +59,7 @@ public class DependencyManager {
       DependencyModel dependencyModel
   ) throws MojoFailureException {
     log.info("[dependbl] Adding artifact " + dependencyModel.getGroupId() + ":" + dependencyModel.getArtifactId() + ":" + dependencyModel.getVersion());
-    setDependencyToBeAdded(dependencyList, dependencyModel.getGroupId(), dependencyModel.getArtifactId(), dependencyModel.getVersion());
+    setDependencyToBeAdded(dependencyList, dependencyModel.getGroupId(), dependencyModel.getArtifactId(), dependencyModel.getVersion(),dependencyModel.getExcludes());
     log.info("[dependbl] Artifact " + dependencyModel.getGroupId() + ":" + dependencyModel.getArtifactId() + ":" + dependencyModel.getVersion() + " was added");
   }
 
@@ -65,7 +67,8 @@ public class DependencyManager {
       List<Dependency> dependencyList,
       String groupId,
       String artifactId,
-      String version
+      String version,
+      String[] exclusions
   ) throws MojoFailureException {
 
     for (Dependency dependency : dependencyList) {
@@ -106,6 +109,8 @@ public class DependencyManager {
     dpdnc.setGroupId(groupId);
     dpdnc.setArtifactId(artifactId);
     dpdnc.setVersion(version);
+    dpdnc.setExclusions(getExclusions(exclusions));
+
 
     log
         .info(
@@ -113,6 +118,23 @@ public class DependencyManager {
                 + groupId + ":" + artifactId + ":" + version
         );
     dependencyList.add(dpdnc);
+  }
+
+  private Exclusion getExclusion(String exclusionData){
+    Exclusion exclusion = new Exclusion();
+    exclusion.setGroupId(exclusionData.split(":")[0]);
+    exclusion.setArtifactId(exclusionData.split(":")[1]);
+    return exclusion;
+
+  }
+
+  private List<Exclusion> getExclusions(String[] exclusions){
+    if(exclusions == null )
+      return null;
+    List<Exclusion> exclusonList = new ArrayList<>();
+    for(String exclusion : exclusions)
+      exclusonList.add(getExclusion(exclusion));
+    return exclusonList;
   }
 
 

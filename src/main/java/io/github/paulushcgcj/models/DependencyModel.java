@@ -6,6 +6,7 @@ public class DependencyModel {
   private String groupId;
   private String artifactId;
   private String version;
+  private String[] excludes;
 
   public DependencyModel() {
   }
@@ -43,6 +44,14 @@ public class DependencyModel {
 
   public void setVersion(String version) {
     this.version = version;
+  }
+
+  public String[] getExcludes() {
+    return excludes;
+  }
+
+  public void setExcludes(String[] excludes) {
+    this.excludes = excludes;
   }
 
   @Override
