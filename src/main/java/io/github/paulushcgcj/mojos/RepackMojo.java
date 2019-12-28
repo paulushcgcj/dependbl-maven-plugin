@@ -48,6 +48,14 @@ public class RepackMojo extends AbstractMojo {
   private String version;
 
   /**
+   * The exclusion of the dependency.
+   *
+   * @required
+   */
+  @Parameter(property = "exclusion", required = true)
+  private String[] excludes;
+
+  /**
    * Execute the mojo
    *
    * @throws MojoExecutionException in case of any failure
