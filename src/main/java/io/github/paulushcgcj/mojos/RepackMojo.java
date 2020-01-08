@@ -52,7 +52,7 @@ public class RepackMojo extends AbstractMojo {
    *
    * @required
    */
-  @Parameter(property = "exclusion", required = true)
+  @Parameter(property = "exclusion")
   private String[] excludes;
 
   /**
@@ -64,8 +64,11 @@ public class RepackMojo extends AbstractMojo {
 
     validate();
 
+    DependencyModel dependencyModel = new DependencyModel(groupid, artifact, version);
+    dependencyModel.setExcludes(excludes);
+
     List<DependencyModel> dependencies = new ArrayList<>();
-    dependencies.add(new DependencyModel(groupid, artifact, version));
+    dependencies.add(dependencyModel);
 
     new ProjectManager(getLog(),project).executeAdd(dependencies);
 
