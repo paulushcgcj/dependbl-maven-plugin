@@ -8,7 +8,7 @@
 
     <groupId>io.github.paulushcgcj</groupId>
     <artifactId>dependbl-maven-plugin</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>Dependency management plugin for Maven</name>
