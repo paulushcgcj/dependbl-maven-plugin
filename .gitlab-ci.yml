@@ -87,11 +87,20 @@ build:
   except:
     - tags
 
-artifactory:
+bintray:
   stage: artifact
   script:
     - 'mvn $MAVEN_OPTS $MAVEN_CLI_OPTS versions:set -DnewVersion="$CI_COMMIT_REF_NAME"'
     - 'mvn $MAVEN_OPTS $MAVEN_CLI_OPTS versions:commit'
     - 'mvn $MAVEN_OPTS $MAVEN_CLI_OPTS javadoc:jar javadoc:javadoc: source:jar deploy'
+  only:
+    - tags
+
+github:
+  stage: artifact
+  script:
+    - 'mvn $MAVEN_OPTS $MAVEN_CLI_OPTS versions:set -DnewVersion="$CI_COMMIT_REF_NAME"'
+    - 'mvn $MAVEN_OPTS $MAVEN_CLI_OPTS versions:commit'
+    - 'mvn $MAVEN_OPTS $MAVEN_CLI_OPTS javadoc:jar javadoc:javadoc: source:jar mvn -Dregistry=https://maven.pkg.github.com/paulushcgcj -Dtoken=$GH_TOKEN'
   only:
     - tags
